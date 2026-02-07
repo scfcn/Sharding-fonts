@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>字体展示中心</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="./ZhuqueFangsong-Regular/result.css">
+    <link rel="stylesheet" href="./Yozai-Medium/result.css">
+    <link rel="stylesheet" href="./LXGWWenKai-Regular/result.css">
+    <link rel="stylesheet" href="./JingHuaLaoSong/result.css">
+    <link rel="stylesheet" href="./GuanKiapTsingKhai/result.css">
+    <link rel="stylesheet" href="./inter/inter.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="title">字体展示中心</h1>
+            <p class="subtitle">探索项目中的所有字体资源</p>
+        </header>
+
+        <div class="controls">
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="搜索字体名称..." class="search-input">
+                <span class="search-icon">🔍</span>
+            </div>
+            <div class="filters">
+                <button class="filter-btn active" data-filter="all">全部</button>
+                <button class="filter-btn" data-filter="chinese">中文字体</button>
+                <button class="filter-btn" data-filter="english">英文字体</button>
+            </div>
+        </div>
+
+        <div class="loading-indicator" id="loadingIndicator">
+            <div class="spinner"></div>
+            <p>正在加载字体...</p>
+        </div>
+
+        <div class="font-grid" id="fontGrid"></div>
+
+        <div class="empty-state" id="emptyState" style="display: none;">
+            <p>未找到匹配的字体</p>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
